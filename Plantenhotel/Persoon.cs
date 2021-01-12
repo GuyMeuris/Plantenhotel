@@ -14,7 +14,7 @@ namespace Plantenhotel
         )
 
     {
-        // velden
+        // fields
         protected static int Persoon_ID = 0;
 
         //properties
