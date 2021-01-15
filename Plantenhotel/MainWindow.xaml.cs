@@ -18,5 +18,10 @@ namespace Plantenhotel
         {
             InitializeComponent();
         }
+
+        private void Knop1_Click( object sender, RoutedEventArgs e )
+        {
+
+        }
     }
 }
