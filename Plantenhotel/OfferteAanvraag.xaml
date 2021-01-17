@@ -9,6 +9,7 @@
       Title="OfferteAanvraag">
 
     <Grid>
-        
+        <Rectangle HorizontalAlignment="Center" Height="407" Margin="0,43,0,0" Stroke="White" VerticalAlignment="Top" Width="800"/>
+
     </Grid>
 </Page>
