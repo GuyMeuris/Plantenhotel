@@ -20,19 +20,24 @@ namespace Plantenhotel
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click( object sender, RoutedEventArgs e )
         {
             Home.Content = new Login();
         }
 
-        private void Button_Click2(object sender, RoutedEventArgs e)
+        private void Button_Click2( object sender, RoutedEventArgs e )
         {
             Home.Content = new OfferteAanvraag();
         }
 
-        private void Button_Click3(object sender, RoutedEventArgs e)
+        private void Button_Click3( object sender, RoutedEventArgs e )
         {
             Home.Content = new Registratie();
+        }
+
+        private void ContactBtn_Click( object sender, RoutedEventArgs e )
+        {
+            Home.Content = new Contact();
         }
     }
 }
