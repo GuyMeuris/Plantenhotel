@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Plantenhotel"
+        xmlns:local="clr-namespace:Plantenhotel" 
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -28,5 +28,9 @@
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="284,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontFamily="Georgia Pro Light" FontSize="14"><Run Language="nl-be" Text="Ik ben een..."/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="525,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontFamily="Georgia Pro Light" FontSize="14"><Run Language="nl-be" Text="Ik wil een..."/></TextBlock>
 
+    <Grid>
+        
     </Grid>
+
+
 </Window>
