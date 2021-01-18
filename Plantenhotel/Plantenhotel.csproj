@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
-    <PackageReference Include="Microsoft.Maps.MapControl.WPF" Version="1.0.0.3" />
+    <None Remove="home pictogram.jpg" />
+    <None Remove="mbrihome_99524.png" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="home pictogram.jpg" />
+    <Resource Include="mbrihome_99524.png" />
 
   <ItemGroup>
     <Reference Include="Microsoft.Maps.MapControl.WPF">
