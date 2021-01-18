@@ -5,28 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Plantenhotel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
     <Grid>
-        <Button Content="Registreren" Margin="84,0,498,380" Click="Button_Click3"/>
-        <Button Content="Login" Margin="340,0,249,380" Click="Button_Click"/>
-        <Button Content="Contact" Margin="589,0,0,380" />
+        <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top">
+            
+            <Button BorderBrush="#FF81D82E" Margin="10,0,0,0" MinWidth="50">
+                <Button.Background>
+                    <ImageBrush ImageSource="/mbrihome_99524.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="registratie" Content="Registreren" Margin="60,0,0,0" MinWidth="200" Background="#FFEFF7E7" BorderBrush="#FF81D82E" Foreground="Black" FontFamily="Georgia Pro Light" Click="Registratie_click"/>
+            <Button Content="Login" Margin="10,0,0,0" MinWidth="200" Background="#FFEFF7E7" BorderBrush="#FF81D82E" Foreground="Black" FontFamily="Georgia Pro Light" Click="Login_click"/>
+            <Button Content="Contact" Margin="10,0,0,0" MinWidth="200" Background="#FFEFF7E7" BorderBrush="#FF81D82E" Foreground="Black" FontFamily="Georgia Pro Light" Click="Contact_click"/>
+            
+        </StackPanel>
 
-        <Frame x:Name="Home" Margin="0,54,0,-4"/>
-        <Label Content="PlantenB&amp;B: De Schuur" Margin="196,95,0,282" HorizontalAlignment="Left" FontSize="48" HorizontalContentAlignment="Center" FontFamily="Poor Richard" RenderTransformOrigin="0.502,0.149">
-            <Label.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF175003" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
-                </LinearGradientBrush>
-            </Label.Foreground>
-        </Label>
-        <Button Content="Klant" Margin="118,316,540,69" x:Name="Klant" Click="Button_Click"/>
-        <Button Content="Medewerker" Margin="352,316,306,69" Click="Button_Click"/>
-        <Button Content="Offerte" Margin="581,316,83,69" Click="Button_Click2"/>
-        <Button Content="Klik hier om meer te weten te komen over De Schuur!" HorizontalAlignment="Left" Height="25" Margin="220,217,0,0" VerticalAlignment="Top" Width="407" BorderBrush="#FFFDFDFD" Background="White" FontSize="16" HorizontalContentAlignment="Center" FontFamily="Georgia Pro Light"/>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="48,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontFamily="Georgia Pro Light" FontSize="14"><Run Language="nl-be" Text="Ik ben een..."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="284,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontFamily="Georgia Pro Light" FontSize="14"><Run Language="nl-be" Text="Ik ben een..."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="525,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontFamily="Georgia Pro Light" FontSize="14"><Run Language="nl-be" Text="Ik wil een..."/></TextBlock>
+        <Frame x:Name="MainFrame" Height="450" Margin="0,50,0,10" Loaded="Home_Loaded" Background="White"/>
+
+
 
     </Grid>
 </Window>

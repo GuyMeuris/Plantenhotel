@@ -9,6 +9,8 @@
       Title="OfferteAanvraag">
 
     <Grid>
+        <Frame x:Name="Offerte" Margin="0,54,0,0"/>
+        
         
     </Grid>
 </Page>
