@@ -14,6 +14,7 @@ namespace Plantenhotel
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -22,8 +23,6 @@ namespace Plantenhotel
         {
             MainFrame.Content = new Home();
         }
-
-
 
         private void Contactclick(object sender, RoutedEventArgs e)
         {
