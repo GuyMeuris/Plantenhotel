@@ -10,18 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Plantenhotel
 {
     /// <summary>
-    /// Interaction logic for Dashboard.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class Dashboard : Window
+    public partial class Home : Page
     {
-        public Dashboard()
+        public Home()
         {
             InitializeComponent();
         }
+
+        private void Login_click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+
     }
 }

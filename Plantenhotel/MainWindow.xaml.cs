@@ -14,14 +14,29 @@ namespace Plantenhotel
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        private void Knop1_Click( object sender, RoutedEventArgs e )
+        private void Home_Loaded(object sender, RoutedEventArgs e)
         {
+            MainFrame.Content = new Home();
+        }
 
+        private void Contactclick(object sender, RoutedEventArgs e)
+        {
+            //MainFrame.Content = new Contact();
+        }
+
+        private void Login_click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new Login();
+        }
+
+        private void Registratie_click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new Registratie();
         }
     }
 }
