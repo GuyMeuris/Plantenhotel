@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Plantenhotel"
-      mc:Ignorable="d" Background="MediumSpringGreen" FontSize="22"
+      mc:Ignorable="d" Background="MediumSpringGreen" FontSize="22" FontFamily="Georgia Pro Light"
       Title="Login" Height="400" Width="600">
 
     <Grid>
