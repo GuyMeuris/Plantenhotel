@@ -4,27 +4,44 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Plantenhotel"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Login">
+      mc:Ignorable="d" Background="MediumSpringGreen" FontSize="22"
+      Title="Login" Height="400" Width="600">
 
     <Grid>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="LoginHeading" Text="Login a.u.b.:" VerticalAlignment="Top" FontSize="20" FontStretch="ExtraCondensed"/>
-        <TextBlock Height="50" HorizontalAlignment="Left" Margin="24,48,0,0" Name="textBlockHeading" VerticalAlignment="Top" FontSize="14" FontStyle="Italic" Padding="5">  
-            <LineBreak /><!--line break-->  
-            Klik 
-           <!--textblock als Hyperlink.-->  
-            <TextBlock>  
-                 <Hyperlink Click="buttonRegister_Click" FontSize="14" FontStyle="Normal">HIER</Hyperlink>  
-            </TextBlock>  
-            <!--end textblock als hyperlink-->  
-             als u nog geen account hebt. 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin=" 0 10 0 50"
+                   HorizontalAlignment="Center" FontSize="48">
+            LOGIN
         </TextBlock>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,120,0,0" Name="textBlock1" FontSize="14" FontWeight="Bold" Text="Email" VerticalAlignment="Top" Width="67" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="58,168,0,0" Name="textBlock2" FontSize="14" FontWeight="Bold" Text="Paswoord" VerticalAlignment="Top" Width="77" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="145,120,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="247" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="145,168,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="247" />
-        <Button Content="Login" FontSize="14" Height="23" HorizontalAlignment="Left" Margin="118,211,0,0" Name="button1" VerticalAlignment="Top" Width="104" Click="button1_Click" />
-        <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="118,253,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
+        
+        <!-- Gebruikersnaam-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin=" 0 0 0 10">
+            Gebruikersnaam:            
+        </TextBlock>
+        <TextBox x:Name="tbGebruikersnaam" Grid.Row="1" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" />
+        
+        <!-- Wachtwoord-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin=" 0 0 0 10">
+            Wachtwoord:
+        </TextBlock>
+        <PasswordBox x:Name="tbWachtwoord" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" />
+
+        <!-- Login-knop-->
+        <Button x:Name="loginKnop"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Padding="25 5"
+                HorizontalAlignment="Center" >
+            Inloggen
+        </Button>
     </Grid>
 </Page>
