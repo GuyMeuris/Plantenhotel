@@ -13,6 +13,7 @@
     <None Remove="Images\GreenOfferteBtn.png" />
     <None Remove="Images\GreenRegBtn.png" />
     <None Remove="Images\TogglePic.png" />
+    <None Remove="MapMarker.png" />
     <None Remove="mbrihome_99524.png" />
   </ItemGroup>
 
@@ -41,7 +42,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images\iconfinder_MapMarker_Marker_Outside_Azure_88051.png">
+    <Resource Include="MapMarker.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\MapMarker.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Tekstbestanden\DeSchuurGegevens.txt">

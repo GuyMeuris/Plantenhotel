@@ -141,7 +141,7 @@
                 <Canvas m:MapLayer.Position="51.051299, 4.459526" 
                         m:MapLayer.PositionOrigin="BottomCenter"
                         Width="20" Height="20">
-                    <Image Source="C:\Users\guy\Source\Repos\GuyMeuris\Plantenhotel\Plantenhotel\Images\iconfinder_MapMarker_Marker_Outside_Azure_88051.png" 
+                    <Image Source="/Images/MapMarker.png" 
                            Height="20" Width="20"/>
                 </Canvas>
             </m:Map>
