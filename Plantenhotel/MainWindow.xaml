@@ -91,6 +91,9 @@
             <Setter Property="HorizontalAlignment"
                     Value="Center"/>
 
+            <Setter Property="Background"
+                    Value="Transparent"/>
+
             <Setter Property="Foreground"
                     Value="#1E550B"/>
 
@@ -399,6 +402,43 @@
                                          Style="{StaticResource tt_style}"/>
 
                             </ListViewItem.ToolTip>
+                            
+                            
+
+                        </ListViewItem>
+
+                        <!-- C O N T A C T -->
+
+                        <ListViewItem HorizontalAlignment="Left"
+                                      Margin="0,0,0,15" MouseEnter="ListViewItem_MouseEnter">
+
+                            <StackPanel Orientation="Horizontal"
+                                        Width="230">
+
+                                <Image Source="Images\GreenContactBtn.png"
+                                       MaxHeight="40"
+                                       MaxWidth="40"
+                                       Stretch="Fill"
+                                       Margin="10,0,0,0"/>
+
+                                <Button Content="Contact"
+                                        Margin="25,0,0,0"
+                                        Style="{StaticResource button_style}"
+                                        Click="Contact_Click"/>
+
+                            </StackPanel>
+
+                            <!-- ToolTip -->
+
+                            <ListViewItem.ToolTip>
+
+                                <ToolTip x:Name="tt_Contact"
+                                         Content="Contact"
+                                         Style="{StaticResource tt_style}"/>
+
+                            </ListViewItem.ToolTip>
+
+
 
                         </ListViewItem>
 

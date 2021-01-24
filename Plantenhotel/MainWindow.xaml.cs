@@ -19,6 +19,7 @@ namespace Plantenhotel
         {
             InitializeComponent();
         }
+
         private void Home_Loaded(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = new Home();
@@ -65,6 +66,11 @@ namespace Plantenhotel
         private void Offerte_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Contact_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new Contact();
         }
     }
 }

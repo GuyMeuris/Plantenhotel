@@ -52,18 +52,23 @@
                     Value="20"/>
 
             <Setter Property="Margin"
-                    Value="0,30"/>
+                    Value="50,30"/>
 
         </Style>
 
     </Page.Resources>
     
     <Grid>
-        <Label Content="PlantenB&amp;B: De Schuur" Style="{StaticResource label_style}" FontSize="48" HorizontalContentAlignment="Center" >
-            
-        </Label>
-
         
-        <TextBlock Text=""/>
+        <StackPanel >
+            <Label Content="PlantenB&amp;B: De Schuur" Style="{StaticResource label_style}" FontSize="48" HorizontalContentAlignment="Center" />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="bla bla bla" Style="{StaticResource font_style}"/>
+                <TextBlock Text="bla bla bla" Style="{StaticResource font_style}"/>
+                <TextBlock Text="bla bla bla" Style="{StaticResource font_style}"/>
+            </StackPanel>
+        </StackPanel>
+        
+        
     </Grid>
 </Page>
