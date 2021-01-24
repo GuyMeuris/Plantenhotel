@@ -24,19 +24,47 @@ namespace Plantenhotel
             MainFrame.Content = new Home();
         }
 
-        private void Contactclick(object sender, RoutedEventArgs e)
+        
+        private void ListViewItem_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            //MainFrame.Content = new Contact();
+            // set tooltip visibility
+
+            if (tg_btn.IsChecked == true)
+            {
+                tt_home.Visibility = Visibility.Collapsed;
+                tt_Registratie.Visibility = Visibility.Collapsed;
+                tt_Login.Visibility = Visibility.Collapsed;
+                tt_Offerte.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                tt_home.Visibility = Visibility.Visible;
+                tt_Registratie.Visibility = Visibility.Visible;
+                tt_Login.Visibility = Visibility.Visible;
+                tt_Offerte.Visibility = Visibility.Visible;
+            }
         }
 
-        private void Login_click(object sender, RoutedEventArgs e)
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new Home();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = new Login();
         }
 
-        private void Registratie_click(object sender, RoutedEventArgs e)
+        private void Registratie_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = new Registratie();
+        }
+
+        
+
+        private void Offerte_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

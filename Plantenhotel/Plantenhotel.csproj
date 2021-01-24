@@ -8,7 +8,30 @@
 
   <ItemGroup>
     <None Remove="home pictogram.jpg" />
+    <None Remove="Images\GreenHomeBtn.png" />
+    <None Remove="Images\GreenLoginBtn.png" />
+    <None Remove="Images\GreenOfferteBtn.png" />
+    <None Remove="Images\GreenRegBtn.png" />
+    <None Remove="Images\TogglePic.png" />
     <None Remove="mbrihome_99524.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\GreenHomeBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenLoginBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenOfferteBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenRegBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TogglePic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
