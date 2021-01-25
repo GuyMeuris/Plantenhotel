@@ -8,26 +8,47 @@
 
   <ItemGroup>
     <None Remove="home pictogram.jpg" />
+    <None Remove="Images\GreenCollegaBtn.png" />
+    <None Remove="Images\GreenContactBtn.png" />
+    <None Remove="Images\GreenEncyclopedieBtn.png" />
     <None Remove="Images\GreenHomeBtn.png" />
     <None Remove="Images\GreenLoginBtn.png" />
+    <None Remove="Images\GreenLogoutBtn.png" />
     <None Remove="Images\GreenOfferteBtn.png" />
     <None Remove="Images\GreenRegBtn.png" />
+    <None Remove="Images\MapMarker.png" />
     <None Remove="Images\TogglePic.png" />
     <None Remove="MapMarker.png" />
     <None Remove="mbrihome_99524.png" />
+    <None Remove="Tekstbestanden\DeSchuurGegevens.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\GreenCollegaBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenContactBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenEncyclopedieBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\GreenHomeBtn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GreenLoginBtn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\GreenLogoutBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\GreenOfferteBtn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GreenRegBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MapMarker.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\TogglePic.png">
@@ -47,15 +68,9 @@
 
   <ItemGroup>
     <Resource Include="MapMarker.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Images\MapMarker.png">
+    <Resource Include="Tekstbestanden\DeSchuurGegevens.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Tekstbestanden\DeSchuurGegevens.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
 
 </Project>

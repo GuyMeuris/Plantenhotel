@@ -20,22 +20,24 @@ namespace Plantenhotel
             InitializeComponent();
         }
 
-        private void Home_Loaded(object sender, RoutedEventArgs e)
+        private void Home_Loaded( object sender, RoutedEventArgs e )
         {
-            MainFrame.Content = new Home();
+            // MainFrame.Content = new Home();
+            MainFrame.NavigationService.Navigate( new Home() );
         }
 
-        
-        private void ListViewItem_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+
+        private void ListViewItem_MouseEnter( object sender, System.Windows.Input.MouseEventArgs e )
         {
             // set tooltip visibility
 
-            if (tg_btn.IsChecked == true)
+            if ( tg_btn.IsChecked == true )
             {
                 tt_home.Visibility = Visibility.Collapsed;
                 tt_Registratie.Visibility = Visibility.Collapsed;
                 tt_Login.Visibility = Visibility.Collapsed;
                 tt_Offerte.Visibility = Visibility.Collapsed;
+                tt_Info.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -43,34 +45,38 @@ namespace Plantenhotel
                 tt_Registratie.Visibility = Visibility.Visible;
                 tt_Login.Visibility = Visibility.Visible;
                 tt_Offerte.Visibility = Visibility.Visible;
+                tt_Info.Visibility = Visibility.Visible;
             }
         }
 
-        private void Home_Click(object sender, RoutedEventArgs e)
+        private void Home_Click( object sender, RoutedEventArgs e )
         {
-            MainFrame.Content = new Home();
+            // MainFrame.Content = new Home();
+            MainFrame.NavigationService.Navigate( new Home() );
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private void Login_Click( object sender, RoutedEventArgs e )
         {
-            MainFrame.Content = new Login();
+            // MainFrame.Content = new Login();
+            MainFrame.NavigationService.Navigate( new Login() );
         }
 
-        private void Registratie_Click(object sender, RoutedEventArgs e)
+        private void Registratie_Click( object sender, RoutedEventArgs e )
         {
-            MainFrame.Content = new Registratie();
+            // MainFrame.Content = new Registratie();
+            MainFrame.NavigationService.Navigate( new Registratie() );
         }
 
-        
-
-        private void Offerte_Click(object sender, RoutedEventArgs e)
+        private void Offerte_Click( object sender, RoutedEventArgs e )
         {
-
+            // MainFrame.Content = new Offerte();
+            // MainFrame.NavigationService.Navigate( new Offerte() );
         }
 
-        private void Contact_Click(object sender, RoutedEventArgs e)
+        private void Info_Click( object sender, RoutedEventArgs e )
         {
-            MainFrame.Content = new Contact();
+            // MainFrame.Content = new Info();
+            MainFrame.NavigationService.Navigate( new Info() );
         }
     }
 }
