@@ -68,9 +68,9 @@
 
   <ItemGroup>
     <Resource Include="MapMarker.png" />
-    <Resource Include="Tekstbestanden\DeSchuurGegevens.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="Tekstbestanden\DeSchuurGegevens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

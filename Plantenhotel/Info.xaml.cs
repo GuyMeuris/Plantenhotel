@@ -42,13 +42,16 @@ namespace Plantenhotel
 
         private static string DisplayBedrijfsinfo( int i )
         {
+
             string[] regels;
             string resultaat = String.Empty;
             try
             {
-                string dir = @"C:\Users\guy\source\repos\Plantenhotel\Plantenhotel\Plantenhotel\Tekstbestanden\DeSchuurGegevens.txt";
+                string dir = "Tekstbestanden/DeSchuurGegevens.txt";
                 using StreamReader sr = new StreamReader( dir );
-                string tekst = sr.ReadLine();
+                string tekst = sr.ReadToEnd();
+
+
                 regels = tekst.Split( ";" );
                 resultaat = regels[i];
             }
