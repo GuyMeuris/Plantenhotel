@@ -54,12 +54,9 @@
             x:Name="naamBedrijf"
             Grid.Row="0"
             Grid.Column="1"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
+            Style="{StaticResource myStyle}"
             d:Content="PlantenBnB: De Schuur"
-            FontFamily="Bahnschrift Light"
-            FontSize="35"
-            Foreground="#1E550B" />
+            FontSize="35" />
 
         <Grid
             Grid.Row="1"

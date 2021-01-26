@@ -49,9 +49,7 @@ namespace Plantenhotel
             {
                 string dir = "Tekstbestanden/DeSchuurGegevens.txt";
                 using StreamReader sr = new StreamReader( dir );
-                string tekst = sr.ReadToEnd();
-
-
+                string tekst = sr.ReadLine();
                 regels = tekst.Split( ";" );
                 resultaat = regels[i];
             }

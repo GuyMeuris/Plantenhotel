@@ -1,74 +1,92 @@
-﻿<Page x:Class="Plantenhotel.Home"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Plantenhotel"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="730"
-      Title="Home">
+﻿<Page
+    x:Class="Plantenhotel.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Plantenhotel"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Home"
+    d:DesignHeight="450"
+    d:DesignWidth="730"
+    mc:Ignorable="d"
+    Loaded="Home_Load">
 
     <Page.Resources>
 
-        <!-- Text Font Style Template -->
+        <!--  Text Font Style Template  -->
 
         <Style x:Key="label_style" TargetType="Label">
 
-            <Setter Property="FontFamily"
-                    Value="Bahnschrift Light"/>
+            <Setter Property="FontFamily" Value="Bahnschrift Light" />
 
-            <Setter Property="VerticalAlignment"
-                    Value="Top"/>
+            <Setter Property="VerticalAlignment" Value="Top" />
 
-            <Setter Property="HorizontalAlignment"
-                    Value="Left"/>
+            <Setter Property="HorizontalAlignment" Value="Left" />
 
-            <Setter Property="Foreground"
-                    Value="#1E550B"/>
+            <Setter Property="Foreground" Value="#1E550B" />
 
-            <Setter Property="FontSize"
-                    Value="20"/>
+            <Setter Property="FontSize" Value="20" />
 
-            <Setter Property="Margin"
-                    Value="20,30"/>
 
         </Style>
 
         <Style x:Key="font_style" TargetType="TextBlock">
 
-            <Setter Property="FontFamily"
-                    Value="Bahnschrift Light"/>
+            <Setter Property="FontFamily" Value="Bahnschrift Light" />
 
-            <Setter Property="VerticalAlignment"
-                    Value="Top"/>
+            <Setter Property="VerticalAlignment" Value="Top" />
 
-            <Setter Property="HorizontalAlignment"
-                    Value="Left"/>
+            <Setter Property="HorizontalAlignment" Value="Left" />
 
-            <Setter Property="Foreground"
-                    Value="#1E550B"/>
+            <Setter Property="Foreground" Value="#1E550B" />
 
-            <Setter Property="FontSize"
-                    Value="20"/>
+            <Setter Property="FontSize" Value="20" />
 
-            <Setter Property="Margin"
-                    Value="50,30"/>
+            <Setter Property="Margin" Value="50,30" />
 
         </Style>
 
     </Page.Resources>
-    
+
     <Grid>
-        
-        <StackPanel >
-            <Label Content="PlantenB&amp;B: De Schuur" Style="{StaticResource label_style}" FontSize="48" HorizontalContentAlignment="Center" />
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="bla bla bla" Style="{StaticResource font_style}"/>
-                <TextBlock Text="bla bla bla" Style="{StaticResource font_style}"/>
-                <TextBlock Text="bla bla bla" Style="{StaticResource font_style}"/>
-            </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Label
+            x:Name="naamBedrijf"
+            d:Content="PlantenB&amp;B: De Schuur"
+            FontSize="48"
+            Style="{StaticResource label_style}" />
         </StackPanel>
-        
-        
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Border Margin="30" >
+                <Image Source="Images/plantenhotel.jpg"/>
+            </Border>
+            <TextBlock Style="{StaticResource font_style}"
+                       />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock 
+                x:Name="infoBedrijf"
+                Text="{Binding Info}"
+                Style="{StaticResource font_style}"
+                FontSize="13"
+                Margin="10, 30, 10, 30" >
+
+            </TextBlock>
+        </StackPanel>
+
+
     </Grid>
 </Page>
