@@ -53,30 +53,35 @@ namespace Plantenhotel
         {
             // MainFrame.Content = new Home();
             MainFrame.NavigationService.Navigate( new Home() );
+            tg_btn.IsChecked = false;
         }
 
         private void Login_Click( object sender, RoutedEventArgs e )
         {
             // MainFrame.Content = new Login();
             MainFrame.NavigationService.Navigate( new Login() );
+            tg_btn.IsChecked = false;
         }
 
         private void Registratie_Click( object sender, RoutedEventArgs e )
         {
             // MainFrame.Content = new Registratie();
             MainFrame.NavigationService.Navigate( new Registratie() );
+            tg_btn.IsChecked = false;
         }
 
         private void Offerte_Click( object sender, RoutedEventArgs e )
         {
             // MainFrame.Content = new Offerte();
-            // MainFrame.NavigationService.Navigate( new Offerte() );
+            MainFrame.NavigationService.Navigate( new OfferteAanvraag() );
+            tg_btn.IsChecked = false;
         }
 
         private void Info_Click( object sender, RoutedEventArgs e )
         {
             // MainFrame.Content = new Info();
             MainFrame.NavigationService.Navigate( new Info() );
+            tg_btn.IsChecked = false;
         }
     }
 }

@@ -19,7 +19,6 @@
     <None Remove="Images\MapMarker.png" />
     <None Remove="Images\plantenhotel.jpg" />
     <None Remove="Images\TogglePic.png" />
-    <None Remove="MapMarker.png" />
     <None Remove="mbrihome_99524.png" />
     <None Remove="Tekstbestanden\DeSchuurGegevens.txt" />
   </ItemGroup>
@@ -71,7 +70,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="MapMarker.png" />
     <Content Include="Tekstbestanden\DeSchuurGegevens.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
