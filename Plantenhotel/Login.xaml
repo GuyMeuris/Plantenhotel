@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Plantenhotel"
-      mc:Ignorable="d" Background="MediumSpringGreen" FontSize="22" FontFamily="Georgia Pro Light"
+        mc:Ignorable="d" Background="MediumSpringGreen" FontSize="22" FontFamily="Georgia Pro Light"
       Title="Login" Height="400" Width="600">
 
     <Grid>
@@ -25,22 +25,22 @@
                    HorizontalAlignment="Center" FontSize="48">
             LOGIN
         </TextBlock>
-        
+
         <!-- Gebruikersnaam-->
         <TextBlock Grid.Row="1" Grid.Column="1" Margin=" 0 0 0 10">
-            Gebruikersnaam:            
+            Gebruikersnaam:
         </TextBlock>
         <TextBox x:Name="tbGebruikersnaam" Grid.Row="1" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" />
-        
+
         <!-- Wachtwoord-->
         <TextBlock Grid.Row="2" Grid.Column="1" Margin=" 0 0 0 10">
             Wachtwoord:
         </TextBlock>
-        <PasswordBox x:Name="tbWachtwoord" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" />
+        <TextBox x:Name="tbWachtwoord" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" />
 
         <!-- Login-knop-->
-        <Button x:Name="loginKnop"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Padding="25 5"
-                HorizontalAlignment="Center" >
+        <Button Name="loginKnop"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Padding="25 5"
+                HorizontalAlignment="Center" Click="loginKnop_Click_1" >
             Inloggen
         </Button>
     </Grid>
