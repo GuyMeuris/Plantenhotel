@@ -31,8 +31,8 @@ namespace Plantenhotel
             if (tbGebruikersnaam.Text.Contains("DeSchuur") && tbWachtwoord.Password.Contains("Fotosynthese"))
             {
                 MessageBox.Show("Welkom, collega!");
-                Home homePg = new Home();     //klopt deze pagina?
-                NavigationService.Navigate(homePg);
+                Dashboard dash = new Dashboard();
+                NavigationService.Navigate(dash);
             }
             else
             {
@@ -62,8 +62,8 @@ namespace Plantenhotel
                     && gebruikers.IndexOf(user) == wachtwoorden.IndexOf(paswoord))
                 {
                     MessageBox.Show("U bent ingelogd, welkom!");
-                    OfferteAanvraag offertePg = new OfferteAanvraag();    //klopt deze pagina?
-                    NavigationService.Navigate(offertePg);
+                    Klantenmenu klantMenu = new Klantenmenu();     
+                    NavigationService.Navigate(klantMenu);
                 }
                 else
                 
