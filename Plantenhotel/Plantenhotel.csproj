@@ -8,7 +8,113 @@
 
   <ItemGroup>
     <None Remove="home pictogram.jpg" />
+    <None Remove="Images\arrow_down.png" />
+    <None Remove="Images\arrow_left.png" />
+    <None Remove="Images\arrow_right.png" />
+    <None Remove="Images\bell.png" />
+    <None Remove="Images\check.png" />
+    <None Remove="Images\enveloppe.png" />
+    <None Remove="Images\fout.png" />
+    <None Remove="Images\GreenCollegaBtn.png" />
+    <None Remove="Images\GreenContactBtn.png" />
+    <None Remove="Images\GreenEncyclopedieBtn.png" />
+    <None Remove="Images\GreenHomeBtn.png" />
+    <None Remove="Images\GreenLoginBtn.png" />
+    <None Remove="Images\GreenLogoutBtn.png" />
+    <None Remove="Images\GreenOfferteBtn.png" />
+    <None Remove="Images\GreenRegBtn.png" />
+    <None Remove="Images\GreenSettingsBtn.png" />
+    <None Remove="Images\GreenTreePic.png" />
+    <None Remove="Images\hoogte.png" />
+    <None Remove="Images\MapMarker.png" />
+    <None Remove="Images\plantenhotel.jpg" />
+    <None Remove="Images\printer.png" />
+    <None Remove="Images\surface.png" />
+    <None Remove="Images\temp.png" />
+    <None Remove="Images\TogglePic.png" />
+    <None Remove="Images\water.png" />
+    <None Remove="Images\zon.png" />
     <None Remove="mbrihome_99524.png" />
+    <None Remove="Tekstbestanden\DeSchuurGegevens.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\arrow_down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\check.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\enveloppe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenCollegaBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenContactBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenEncyclopedieBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenHomeBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenLoginBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenLogoutBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenOfferteBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenRegBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenSettingsBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenTreePic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\hoogte.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MapMarker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\plantenhotel.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\printer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\surface.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TogglePic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\water.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\zon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maps.MapControl.WPF" Version="1.0.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,12 +124,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images\iconfinder_MapMarker_Marker_Outside_Azure_88051.png">
+    <Content Include="Tekstbestanden\DeSchuurGegevens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\fout.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Tekstbestanden\DeSchuurGegevens.txt">
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\temp.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
 </Project>

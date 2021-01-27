@@ -1,0 +1,632 @@
+﻿<Page
+    x:Class="Plantenhotel.Overview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Plantenhotel"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    Title="Overview"
+    d:DesignHeight="540"
+    d:DesignWidth="750"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!--  Text Font Style Template  -->
+        <Style x:Key="font_style" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Bahnschrift Light" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="#1E550B" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--#region Serre Window-->
+
+        <Border
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="20"
+            Padding="5"
+            Background="#FF81D82E">
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Offset="1" Color="#FFDFFFC1" />
+                        <GradientStop Offset="0.673" Color="White" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal">
+                    <Ellipse Width="20" Height="20">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Images/arrow_left.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock
+                        x:Name="naamSerre"
+                        Margin="10,0"
+                        Background="#4C81D82E"
+                        Style="{StaticResource font_style}"
+                        Text="Serre 1" />
+                    <Ellipse Width="20" Height="20">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Images/arrow_right.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </StackPanel>
+
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="10"
+                    Background="#4C81D82E">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Height="25"
+                        Source="/Images/surface.png" />
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Height="15"
+                        RenderTransformOrigin="0.5,0.5"
+                        Source="/Images/hoogte.png">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="-45" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text=":" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text=":" />
+                    <TextBlock
+                        x:Name="grootteSerre"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text="200" />
+                    <TextBlock
+                        x:Name="hoogteSerre"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text="5" />
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Style="{StaticResource font_style}"
+                        Text="m²" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Style="{StaticResource font_style}"
+                        Text="m" />
+                </Grid>
+
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="10"
+                    Background="#4C81D82E">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Height="25"
+                        Source="/Images/temp.png" />
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Height="20"
+                        Source="/Images/water.png" />
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource font_style}"
+                        Text=":" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource font_style}"
+                        Text=":" />
+                    <TextBlock
+                        x:Name="tempSerre"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text="21,5" />
+                    <TextBlock
+                        x:Name="vochtigheidSerre"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text="70" />
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Style="{StaticResource font_style}"
+                        Text="°C" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Style="{StaticResource font_style}"
+                        Text="%" />
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="4"
+                        Height="25"
+                        Source="/Images/check.png" />
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Height="20"
+                        Source="/Images/check.png" />
+                </Grid>
+
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    Background="#4C81D82E">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource font_style}"
+                        Text="Vrije ruimte:" />
+                    <TextBlock
+                        x:Name="vrijeRuimteSerre"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource font_style}"
+                        Text="157" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource font_style}"
+                        Text=" m²" />
+                </Grid>
+
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="10"
+                    Background="#4C81D82E">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource font_style}"
+                        Text="Planten:" />
+                    <Button
+                        Grid.Row="1"
+                        Margin="3"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Weergave lijst"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                </Grid>
+            </Grid>
+
+        </Border>
+
+        <!--#endregion-->
+
+        <!--#region Kalender Window-->
+
+        <Border
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="20"
+            Padding="5"
+            Background="#FF81D82E">
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Offset="1" Color="#FFDFFFC1" />
+                        <GradientStop Offset="0.673" Color="White" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="6*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal">
+
+                    <StackPanel.Resources>
+                        <!--  Met dank aan : https://www.wpf-tutorial.com/data-binding/the-stringformat-property/  -->
+                        <!--  En ook: https://stackoverflow.com/questions/61947217/how-to-display-current-date-and-time-on-wpf-statusbar  -->
+                        <!--  Set x: share to get the latest every time  -->
+                        <system:DateTime x:Key="DateTime" x:Shared="False" />
+                        <Storyboard x:Key="Storyboard">
+                            <!--  Use keyframe animation to update datetime  -->
+                            <ObjectAnimationUsingKeyFrames
+                                AutoReverse="False"
+                                RepeatBehavior="Forever"
+                                Storyboard.TargetProperty="DataContext"
+                                Duration="0:0:1">
+                                <DiscreteObjectKeyFrame KeyTime="50%" Value="{StaticResource DateTime}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </StackPanel.Resources>
+
+                    <Ellipse Width="20" Height="20">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Images/arrow_left.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <TextBlock
+                        Margin="10,0"
+                        Background="#4C81D82E"
+                        DataContext="{StaticResource DateTime}"
+                        Style="{StaticResource font_style}"
+                        Text="{Binding RelativeSource={RelativeSource Self}, Path=DataContext.Now, StringFormat={}{0:dd/MM/yyyy}}">
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard Storyboard="{StaticResource Storyboard}" />
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
+
+                    <Ellipse Width="20" Height="20">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Images/arrow_right.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="10"
+                    Background="#4C81D82E">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Foreground="#FF1E550B"
+                        Text="TO DO:" />
+                    <TextBlock
+                        Margin="0,5"
+                        HorizontalAlignment="Left"
+                        FontSize="12"
+                        Foreground="#FF1E550B"
+                        Text="9u : Ophaling Peeters" />
+                    <Button
+                        Margin="10,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Zie details"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBlock
+                        Margin="0,5"
+                        HorizontalAlignment="Left"
+                        FontSize="12"
+                        Foreground="#FF1E550B"
+                        Text="10u : Aflevering Willems" />
+                    <Button
+                        Margin="10,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Zie details"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Ellipse
+                        Width="20"
+                        Height="20"
+                        Margin="0,10,0,0">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Images/arrow_down.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    Background="#4C81D82E">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        FontWeight="Bold"
+                        Foreground="#FF1E550B"
+                        Text="OPMERKINGEN:" />
+                    <TextBlock
+                        Margin="0,5"
+                        HorizontalAlignment="Center"
+                        FontSize="12"
+                        Foreground="#FF1E550B"
+                        Text="Palmen snoeien" />
+                    <Button
+                        Margin="10,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Zie details"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <!--#endregion-->
+
+        <!--#region Klanten Window-->
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="20"
+            Padding="5"
+            Background="#FF81D82E">
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Offset="1" Color="#FFDFFFC1" />
+                        <GradientStop Offset="0.673" Color="White" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="0"
+                    Margin="10"
+                    Background="#4C81D82E">
+                    <TextBlock
+                        Margin="10"
+                        Style="{StaticResource font_style}"
+                        Text="Klanten met 'gasten' bij ons:" />
+                    <Button
+                        Grid.Row="1"
+                        Margin="30,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Weergave lijst"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Margin="10"
+                    Background="#4C81D82E">
+                    <TextBlock
+                        Margin="10"
+                        Style="{StaticResource font_style}"
+                        Text="Alle klanten ooit:" />
+                    <Button
+                        Grid.Row="1"
+                        Margin="80,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Weergave lijst"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <!--#endregion-->
+
+        <!--#region Planten Window-->
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="20"
+            Padding="5"
+            Background="#FF81D82E">
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Offset="1" Color="#FFDFFFC1" />
+                        <GradientStop Offset="0.673" Color="White" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="0"
+                    Margin="10"
+                    Background="#4C81D82E">
+                    <TextBlock
+                        Margin="10"
+                        Style="{StaticResource font_style}"
+                        Text="Alle planten momenteel bij ons:" />
+                    <Button
+                        Grid.Row="1"
+                        Margin="30,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Weergave lijst"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Margin="10"
+                    Background="#4C81D82E">
+                    <TextBlock
+                        Margin="10"
+                        Style="{StaticResource font_style}"
+                        Text="Alle planten ooit als 'gast':" />
+                    <Button
+                        Grid.Row="1"
+                        Margin="80,0"
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Weergave lijst"
+                        FontWeight="Bold"
+                        Foreground="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <!--#endregion-->
+    </Grid>
+</Page>

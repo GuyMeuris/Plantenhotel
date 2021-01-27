@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Plantenhotel
 {
-
-    public partial class Login
+    /// <summary>
+    /// Interaction logic for Login.xaml
+    /// </summary>
+    public partial class Login : Page
     {
         public Login()
         {
@@ -40,8 +42,8 @@ namespace Plantenhotel
         {
             if (tbGebruikersnaam.Text.Contains("DeSchuur") && tbWachtwoord.Password.Contains("Fotosynthese"))
             {
-               MessageBox.Show("Welkom, collega!");
-               DisplayWindow(new Dashboard());
+                MessageBox.Show("Welkom, collega!");
+                DisplayWindow(new Dashboard());
             }
             else
             {
@@ -75,28 +77,10 @@ namespace Plantenhotel
 
                 }
                 else
-                
+
                     MessageBox.Show("Gebruikersnaam of wachtwoord is niet juist, probeer opnieuw a.u.b.!");
 
             }
-               
-           
         }
-
     }
- 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
