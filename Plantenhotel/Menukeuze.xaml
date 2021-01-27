@@ -1,0 +1,49 @@
+﻿<Page x:Class="Plantenhotel.Menukeuze"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Plantenhotel"
+      mc:Ignorable="d" 
+      d:DesignHeight="540" d:DesignWidth="750"
+      Title="Overview">
+
+    <Page.Resources>
+
+        <!--  Text Font Style Template  -->
+        <Style x:Key="font_style" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Bahnschrift Light" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="#1E550B" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+    </Page.Resources>
+
+    <Grid
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <!--
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        -->
+
+        <!--#region Menu-->
+
+        <TextBlock Text="Klantenmenu hier"
+                   Style="{StaticResource font_style}"
+                   FontSize="45">
+        </TextBlock>
+
+
+        <!--#endregion-->
+    </Grid>
+</Page>

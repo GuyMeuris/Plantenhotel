@@ -24,6 +24,7 @@
     <None Remove="Images\GreenOfferteBtn.png" />
     <None Remove="Images\GreenRegBtn.png" />
     <None Remove="Images\GreenSettingsBtn.png" />
+    <None Remove="Images\GreenTreePic.png" />
     <None Remove="Images\hoogte.png" />
     <None Remove="Images\MapMarker.png" />
     <None Remove="Images\plantenhotel.jpg" />
@@ -81,6 +82,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GreenSettingsBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GreenTreePic.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\hoogte.png">
