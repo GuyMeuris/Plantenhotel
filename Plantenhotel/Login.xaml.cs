@@ -28,9 +28,12 @@ namespace Plantenhotel
 
         private void loginKnop_Click_1(object sender, RoutedEventArgs e)
         {
-            if (tbGebruikersnaam.Text.Contains("DeSchuur") && tbWachtwoord.Text.Contains("Fotosynthese"))
+            if (tbGebruikersnaam.Text.Contains("DeSchuur") && tbWachtwoord.Password.Contains("Fotosynthese"))
             {
-
+                MessageBox.Show("Welkom, collega!");
+                this.Visibility = Visibility.Hidden;
+                Home home = new Home();
+                this.Content = home;
             }
             else
             {
@@ -55,14 +58,17 @@ namespace Plantenhotel
                     }
                 }
                 string user = tbGebruikersnaam.Text.Trim();
-                string paswoord = tbWachtwoord.Text.Trim();
+                string paswoord = tbWachtwoord.Password.Trim();
                 if (gebruikers.Contains(user) && wachtwoorden.Contains(paswoord)
                     && gebruikers.IndexOf(user) == wachtwoorden.IndexOf(paswoord))
                 {
                     MessageBox.Show("U bent ingelogd!");
-                    //naar Menu
+                    this.Visibility = Visibility.Hidden;
+                    OfferteAanvraag offerte = new OfferteAanvraag();
+                    this.Content = offerte;
                 }
                 else
+                
                     MessageBox.Show("Gebruikersnaam of wachtwoord is niet juist!");
             }
         }

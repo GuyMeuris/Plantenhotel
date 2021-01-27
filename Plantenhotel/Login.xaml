@@ -36,7 +36,7 @@
         <TextBlock Grid.Row="2" Grid.Column="1" Margin=" 0 0 0 10">
             Wachtwoord:
         </TextBlock>
-        <TextBox x:Name="tbWachtwoord" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" />
+        <PasswordBox x:Name="tbWachtwoord" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin=" 30 0 0 30" Visibility="Visible" />
 
         <!-- Login-knop-->
         <Button Name="loginKnop"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Padding="25 5"
