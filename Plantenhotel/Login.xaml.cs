@@ -26,13 +26,22 @@ namespace Plantenhotel
         List<string> gebruikers = new List<string>();
         List<string> wachtwoorden = new List<string>();
 
+        private void DisplayWindow(Window windowToShow)
+        {
+            for (int i = 0; i < Application.Current.Windows.OfType<Window>().
+            Where(w => w.IsVisible).Count(); i++)
+            {
+                Window windowToHide = Application.Current.Windows[i];
+                windowToHide.Visibility = Visibility.Collapsed;
+            }
+            windowToShow.Visibility = Visibility.Visible;
+        }
         private void loginKnop_Click_1(object sender, RoutedEventArgs e)
         {
             if (tbGebruikersnaam.Text.Contains("DeSchuur") && tbWachtwoord.Password.Contains("Fotosynthese"))
             {
-                MessageBox.Show("Welkom, collega!");
-                Dashboard dash = new Dashboard();
-                NavigationService.Navigate(dash);
+               MessageBox.Show("Welkom, collega!");
+               DisplayWindow(new Dashboard());
             }
             else
             {
@@ -62,13 +71,16 @@ namespace Plantenhotel
                     && gebruikers.IndexOf(user) == wachtwoorden.IndexOf(paswoord))
                 {
                     MessageBox.Show("U bent ingelogd, welkom!");
-                    Klantenmenu klantMenu = new Klantenmenu();     
-                    NavigationService.Navigate(klantMenu);
+                    DisplayWindow(new Klantenmenu());
+
                 }
                 else
                 
                     MessageBox.Show("Gebruikersnaam of wachtwoord is niet juist, probeer opnieuw a.u.b.!");
+
             }
+               
+           
         }
 
     }

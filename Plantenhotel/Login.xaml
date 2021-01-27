@@ -22,7 +22,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin=" 0 10 0 50"
-                   HorizontalAlignment="Center" FontSize="48">
+                   HorizontalAlignment="Right" FontSize="48">
             LOGIN
         </TextBlock>
 
