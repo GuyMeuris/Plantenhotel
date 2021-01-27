@@ -10,7 +10,7 @@ namespace Plantenhotel
 
         private string achternaam;
         private string voornaam;
-        private DateTime geboortedatum;
+        private string geboortedatum;
         private string gsmNr;
         private string email;
         private string gebruikersnaam;
@@ -52,7 +52,7 @@ namespace Plantenhotel
             }
         }
 
-        public DateTime Geboortedatum
+        public string Geboortedatum
         {
             get { return geboortedatum; }
             set
@@ -120,7 +120,7 @@ namespace Plantenhotel
 
         #region Constructor
 
-        public Persoon( string achternaam, string voornaam, DateTime geboortedatum, string gsmnr, string email, string gebruikersnaam, string wachtwoord )
+        public Persoon( string achternaam, string voornaam, string geboortedatum, string gsmnr, string email, string gebruikersnaam, string wachtwoord )
         {
             Achternaam = achternaam;
             Voornaam = voornaam;

@@ -17,16 +17,8 @@ namespace Plantenhotel
         /// </summary>
         private int aantalBestellingen = 0;
 
-        /// <summary>
-        /// Als klant particulier is, dan is de waarde true (default)
-        /// Is de klant een bedrijf dan is de waarde false
-        /// </summary>
-        public bool isParticulier = true;
-
-        /// <summary>
-        /// Indien klant een bedrijf is, dan wordt hier de BTW-nr. bewaard
-        /// </summary>
-        public string BTWnr = "n.v.t.";
+       
+        
 
         #endregion
 
@@ -50,23 +42,15 @@ namespace Plantenhotel
         #region Constructors
 
         public Klant( string achternaam, string voornaam,
-                            DateTime geboortedatum, string gsmnr,
+                            string geboortedatum, string gsmnr,
                                     string email, string gebruikersnaam,
-                                            string wachtwoord, bool isparticulier ) :
+                                            string wachtwoord  ) :
             base( achternaam, voornaam, geboortedatum, gsmnr, email, gebruikersnaam, wachtwoord )
         {
-            isParticulier = isparticulier;
+            
         }
 
-        public Klant( string achternaam, string voornaam,
-                            DateTime geboortedatum, string gsmnr,
-                                    string email, string gebruikersnaam,
-                                            string wachtwoord, bool isparticulier, string btwnr ) :
-            base( achternaam, voornaam, geboortedatum, gsmnr, email, gebruikersnaam, wachtwoord )
-        {
-            isParticulier = isparticulier;
-            BTWnr = btwnr;
-        }
+       
 
         #endregion
     }
