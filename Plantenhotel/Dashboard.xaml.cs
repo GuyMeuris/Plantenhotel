@@ -11,6 +11,7 @@ namespace Plantenhotel
         public Dashboard()
         {
             InitializeComponent();
+
         }
 
         private void Home_Loaded( object sender, RoutedEventArgs e )

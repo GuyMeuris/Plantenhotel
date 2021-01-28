@@ -2,7 +2,8 @@
  * Deelnemers: Nina Roland, Benjamin Donck, Nigel De Maeght, Guy Meuris
  * Gemaakt in januari 2021
 
-   Deze app geeft een oplossing voor bedrijven die een plantenhotel uitbaten.
+   Deze app (wanneer helemaal functioneel) geeft een oplossing voor 
+   bedrijven die een plantenhotel uitbaten.
 */
 
 using System.Windows;
@@ -18,11 +19,24 @@ namespace Plantenhotel
         public MainWindow()
         {
             InitializeComponent();
+
+            Serre serre1 = new Serre( "Serre1", 200, 5, 22, 70 );
+            serre1.HuidigeTemp = 21;
+            serre1.HuidigeVochtigheid = 71;
+            Serre serre2 = new Serre( "Serre2", 100, 3, 22, 70 );
+            serre2.HuidigeTemp = 25;
+            serre2.HuidigeVochtigheid = 70;
+            Serre serre3 = new Serre( "Serre3", 200, 5, 17, 55 );
+            serre3.HuidigeTemp = 20;
+            serre3.HuidigeVochtigheid = 55;
+            Serre serre4 = new Serre( "Serre4", 100, 3, 17, 55 );
+            serre4.HuidigeTemp = 22;
+            serre4.HuidigeVochtigheid = 70;
+
         }
 
         private void Home_Loaded( object sender, RoutedEventArgs e )
         {
-            // MainFrame.Content = new Home();
             MainFrame.NavigationService.Navigate( new Home() );
         }
 

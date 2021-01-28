@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
 
 namespace Plantenhotel
 {
@@ -20,9 +7,42 @@ namespace Plantenhotel
     /// </summary>
     public partial class Overview : Page
     {
+        private int keuzeIndex = 0;
+
         public Overview()
         {
             InitializeComponent();
+
+            ShowSerre();
+        }
+
+        private void SerreKiezenMin_Click( object sender, System.Windows.RoutedEventArgs e )
+        {
+            keuzeIndex--;
+            if ( keuzeIndex == -1 )
+            {
+                keuzeIndex = Serre.lijstSerres.Count - 1;
+            }
+            ShowSerre();
+        }
+
+        private void SerreKiezen_Plus( object sender, System.Windows.RoutedEventArgs e )
+        {
+            keuzeIndex++;
+            if ( keuzeIndex == Serre.lijstSerres.Count )
+            {
+                keuzeIndex = 0;
+            }
+            ShowSerre();
+        }
+
+        private void ShowSerre()
+        {
+            naamSerre.DataContext = Serre.lijstSerres[keuzeIndex];
+            grootteSerre.DataContext = Serre.lijstSerres[keuzeIndex];
+            hoogteSerre.DataContext = Serre.lijstSerres[keuzeIndex];
+            tempSerre.DataContext = Serre.lijstSerres[keuzeIndex];
+            vochtigheidSerre.DataContext = Serre.lijstSerres[keuzeIndex];
         }
     }
 }

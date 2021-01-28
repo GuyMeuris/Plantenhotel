@@ -17,7 +17,7 @@ namespace Plantenhotel
         /// <summary>
         /// Hier worden alle serre-instanties bewaard
         /// </summary>
-        public List<Serre> lijstSerres = new List<Serre>();
+        public static List<Serre> lijstSerres = new List<Serre>();
 
         #endregion
 
@@ -166,7 +166,7 @@ namespace Plantenhotel
                 if ( value != idealeVochtigheid )
                 {
                     idealeVochtigheid = value;
-                    OnPropertyChanged( "idealeVochtigheid" );
+                    OnPropertyChanged( "IdealeVochtigheid" );
                 }
             }
         }
@@ -182,6 +182,8 @@ namespace Plantenhotel
             Hoogte = hoogte;
             IdealeTemp = idealetemp;
             IdealeVochtigheid = idealevochtigheid;
+
+            lijstSerres.Add( this );
         }
 
         #endregion
