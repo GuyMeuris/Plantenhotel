@@ -83,5 +83,10 @@ namespace Plantenhotel
             MainFrame.NavigationService.Navigate( new Info() );
             tg_btn.IsChecked = false;
         }
+
+        private void Close_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
