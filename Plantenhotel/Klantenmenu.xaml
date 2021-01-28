@@ -49,12 +49,17 @@
                     <GradientStop Offset="0.41" Color="White" />
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <Border
+            <Button
                 Width="70"
                 Height="70"
                 Margin="0,20,0,0"
-                Background="#FFFDFDFD"
-                CornerRadius="40,40,40,40">
+                Background="#FFFDFDFD" 
+                BorderBrush="{x:Null}" Click="Home_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40" />
+                    </Style>
+                </Button.Resources>
                 <Ellipse
                     Width="65"
                     Height="65"
@@ -63,7 +68,7 @@
                         <ImageBrush ImageSource="/Images/GreenHomeBtn.png" />
                     </Ellipse.Fill>
                 </Ellipse>
-            </Border>
+            </Button>
             <Border
                 Width="70"
                 Height="70"
@@ -138,12 +143,17 @@
                 </Ellipse>
             </Border>
             <TextBlock Style="{StaticResource font_style}" Text="Settings" />
-            <Border
+            <Button
                 Width="70"
                 Height="70"
                 Margin="0,15,0,0"
-                Background="#FFFDFDFD"
-                CornerRadius="40,40,40,40">
+                Background="#FFFDFDFD" 
+                BorderBrush="{x:Null}" Click="Afsluiten_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40" />
+                    </Style>
+                </Button.Resources>
                 <Ellipse Width="65" Height="65">
                     <Ellipse.Fill>
                         <ImageBrush
@@ -160,7 +170,7 @@
                         </ImageBrush>
                     </Ellipse.Fill>
                 </Ellipse>
-            </Border>
+            </Button>
             <TextBlock Style="{StaticResource font_style}" Text="Afsluiten" />
         </StackPanel>
 
