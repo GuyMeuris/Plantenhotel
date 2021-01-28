@@ -90,6 +90,10 @@
 
             <Setter Property="BorderBrush" Value="Transparent" />
 
+            <Setter Property="MinHeight" Value="40"/>
+
+            <Setter Property="MinWidth" Value="100"/>
+
         </Style>
 
 
@@ -495,6 +499,24 @@
                     </ListView.ItemContainerStyle>
 
                 </ListView>
+
+                <Button x:Name="Close_Btn"
+                        Width="50"
+                        Height="50"
+                        Margin="0,60"
+                        BorderBrush="Transparent"
+                        Click="Close_Btn_Click">
+                    
+                    <Image Source="Images/GreenCloseBtn.png"/>
+
+                    <Button.ToolTip>
+                        <ToolTip
+                                x:Name="tt_Close"
+                                Content="Close"
+                                Style="{StaticResource tt_style}" />
+                    </Button.ToolTip>
+
+                </Button>
 
             </StackPanel>
 

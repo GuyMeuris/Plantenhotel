@@ -102,7 +102,10 @@ namespace Plantenhotel
 
         }
 
-
-    
-}
+        private void Clear_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            IngevoerdePlanten.Items.Clear();
+            plantenOpp.Clear();
+        }
+    }
 }
