@@ -146,7 +146,7 @@
             Loaded="Home_Loaded"
             NavigationUIVisibility="Hidden" >
             <Frame.Background>
-                <ImageBrush ImageSource="Images/Blaadjes.png"/>
+                <ImageBrush ImageSource="Images/Blaadjes.PNG"/>
             </Frame.Background>
         </Frame>
 
