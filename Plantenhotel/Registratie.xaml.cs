@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Security.Cryptography;
+using Plantenhotel;
 
 
 namespace Plantenhotel
@@ -38,7 +40,7 @@ namespace Plantenhotel
                 System.IO.FileStream gegevensKlant;
                 byte[] gegevens = null;
                 gegevens = Encoding.ASCII.GetBytes(achnaam.Text + vrnaam.Text + straat.Text + nr.Text + postcode.Text + stad.Text + gsm.Text + geboorte.Text + mail.Text + Environment.NewLine);
-                gegevensKlant = new FileStream("F:\\gegevensKlant.txt", FileMode.Append);
+                gegevensKlant = new FileStream("Tekstbestanden/gegevensKlant.txt", FileMode.Append);
                 gegevensKlant.Write(gegevens, 0, gegevens.Length);
                 gegevensKlant.Close();
             }
@@ -48,8 +50,7 @@ namespace Plantenhotel
                 MessageBox.Show(ex.ToString());
             }
 
-
-
+            
             //gebruikersnaam en wachtwoord
             try
             {
@@ -57,8 +58,12 @@ namespace Plantenhotel
 
                 System.IO.FileStream gebrww;
                 byte[] gww = null;
-                gww = Encoding.ASCII.GetBytes(gebrnaam.Text + wwoord.Text + Environment.NewLine);
-                gebrww = new FileStream("F:\\GebruikersnaamWachtwoord.txt", FileMode.Append);
+
+                string encGebr = AEScrypto.Encryptie(gebrnaam.Text);            //encryptie (?)
+                string encWW = AEScrypto.Encryptie(wwoord.Text);
+
+                gww = Encoding.ASCII.GetBytes(encGebr + encWW + Environment.NewLine);
+                gebrww = new FileStream("Tekstbestanden/GebruikersnaamWachtwoord.txt", FileMode.Append);
 
 
                 gebrww.Write(gww, 0, gww.Length);
