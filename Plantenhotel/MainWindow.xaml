@@ -6,9 +6,11 @@
     xmlns:local="clr-namespace:Plantenhotel"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
-    Height="450"
+    Width="900"
+    Height="600"
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
 
     <Window.Resources>
