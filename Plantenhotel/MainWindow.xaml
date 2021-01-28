@@ -6,9 +6,11 @@
     xmlns:local="clr-namespace:Plantenhotel"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
-    Height="450"
+    Width="900"
+    Height="600"
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
 
     <Window.Resources>
@@ -144,10 +146,7 @@
             Loaded="Home_Loaded"
             NavigationUIVisibility="Hidden" >
             <Frame.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#a2f453" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.553"/>
-                </LinearGradientBrush>
+                <ImageBrush ImageSource="Images/Blaadjes.PNG"/>
             </Frame.Background>
         </Frame>
 
@@ -261,7 +260,7 @@
                     <!--  H O M E  -->
 
                     <ListViewItem
-                        Margin="0,0,0,15"
+                        Margin="0,10,0,15"
                         HorizontalAlignment="Left"
                         MouseEnter="ListViewItem_MouseEnter">
 
@@ -298,7 +297,7 @@
                     <!--  R E G I S T R E E R  -->
 
                     <ListViewItem
-                        Margin="0,0,0,15"
+                        Margin="0,10,0,15"
                         HorizontalAlignment="Left"
                         MouseEnter="ListViewItem_MouseEnter">
 
@@ -335,7 +334,7 @@
                     <!--  L O G I N  -->
 
                     <ListViewItem
-                        Margin="0,0,0,15"
+                        Margin="0,10,0,15"
                         HorizontalAlignment="Left"
                         MouseEnter="ListViewItem_MouseEnter">
 
@@ -372,7 +371,7 @@
                     <!--  O F F E R T E  -->
 
                     <ListViewItem
-                        Margin="0,0,0,15"
+                        Margin="0,10,0,15"
                         HorizontalAlignment="Left"
                         MouseEnter="ListViewItem_MouseEnter">
 
@@ -409,7 +408,7 @@
                     <!--  B E D R I J F S I N F O  -->
 
                     <ListViewItem
-                        Margin="0,0,0,15"
+                        Margin="0,10,0,15"
                         HorizontalAlignment="Left"
                         MouseEnter="ListViewItem_MouseEnter">
 

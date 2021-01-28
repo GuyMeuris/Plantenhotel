@@ -35,12 +35,14 @@ namespace Plantenhotel
             // gegevens
             try
             {
-                System.IO.FileStream gegevensKlant;
-                byte[] gegevens = null;
-                gegevens = Encoding.ASCII.GetBytes(achnaam.Text + vrnaam.Text + straat.Text + nr.Text + postcode.Text + stad.Text + gsm.Text + geboorte.Text + mail.Text + Environment.NewLine);
-                gegevensKlant = new FileStream("Tekstbestanden/gegevensKlant.txt", FileMode.Append);
-                gegevensKlant.Write(gegevens, 0, gegevens.Length);
-                gegevensKlant.Close();
+                //System.IO.FileStream gegevensKlant;
+                //byte[] gegevens = null;
+                //gegevens = Encoding.ASCII.GetBytes(achnaam.Text + vrnaam.Text + straat.Text + nr.Text + postcode.Text + stad.Text + gsm.Text + geboorte.Text + mail.Text + Environment.NewLine);
+                //gegevensKlant = new FileStream("Tekstbestanden/gegevensKlant.txt", FileMode.Append);
+                //gegevensKlant.Write(gegevens, 0, gegevens.Length);
+                //gegevensKlant.Close();
+                Klant k = new Klant(achnaam.Text, vrnaam.Text, geboorte.Text, nr.Text, mail.Text, gebrnaam.Text, wwoord.Text);
+
             }
 
             catch (IOException ex)
@@ -50,30 +52,9 @@ namespace Plantenhotel
 
 
 
-            //gebruikersnaam en wachtwoord
-            try
-            {
+            MessageBox.Show("U bent geregistreerd. Weet dat uw planten veilig zijn in onze handen.");
 
 
-                System.IO.FileStream gebrww;
-                byte[] gww = null;
-                gww = Encoding.ASCII.GetBytes(gebrnaam.Text + wwoord.Text + Environment.NewLine);
-                gebrww = new FileStream("Tekstbestanden/GebruikersnaamWachtwoord.txt", FileMode.Append);
-
-
-                gebrww.Write(gww, 0, gww.Length);
-
-                gebrww.Close();
-
-
-            }
-
-            catch (IOException ex2)
-            {
-                MessageBox.Show(ex2.ToString());
-            }
-
-            Klant k = new Klant(achnaam.Text, vrnaam.Text, geboorte.Text, nr.Text, mail.Text, gebrnaam.Text, wwoord.Text);
 
             //naar login pagina
             Login nextPage = new Login();

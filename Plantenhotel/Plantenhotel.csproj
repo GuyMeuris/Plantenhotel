@@ -12,6 +12,7 @@
     <None Remove="Images\arrow_left.png" />
     <None Remove="Images\arrow_right.png" />
     <None Remove="Images\bell.png" />
+    <None Remove="Images\Blaadjes.PNG" />
     <None Remove="Images\check.png" />
     <None Remove="Images\enveloppe.png" />
     <None Remove="Images\fout.png" />
@@ -147,6 +148,12 @@
     <Content Include="Images\temp.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Blaadjes.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
