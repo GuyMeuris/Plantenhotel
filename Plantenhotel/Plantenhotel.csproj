@@ -36,6 +36,8 @@
     <None Remove="Images\zon.png" />
     <None Remove="mbrihome_99524.png" />
     <None Remove="Tekstbestanden\DeSchuurGegevens.txt" />
+    <None Remove="Tekstbestanden\GebruikersnaamWachtwoord.txt" />
+    <None Remove="Tekstbestanden\gegevensKlant.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -110,6 +112,12 @@
     </Content>
     <Content Include="Images\zon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tekstbestanden\GebruikersnaamWachtwoord.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tekstbestanden\gegevensKlant.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

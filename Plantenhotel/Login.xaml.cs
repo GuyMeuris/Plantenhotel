@@ -48,7 +48,7 @@ namespace Plantenhotel
             else
             {
                 //KanInloggen(_gebruiker, _wachtwoord);
-                StreamReader sr = new StreamReader(@"C:\Visual Studio Repos\GebruikersnaamWachtwoord.txt");
+                StreamReader sr = new StreamReader(@"Tekstbestanden\GebruikersnaamWachtwoord.txt");
                 string components = sr.ReadToEnd();
                 //components splitsen naar array
                 String[] regels = components.Split("\n");
