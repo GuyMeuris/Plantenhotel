@@ -39,9 +39,9 @@ namespace Plantenhotel
         private double hoogte;
 
         /// <summary>
-        /// Ruimte die alle aanwezige planten innemen.
+        /// Ruimte die overblijft met alle aanwezige planten.
         /// </summary>
-        private double gebruikteRuimte;
+        private double vrijeRuimte;
 
         /// <summary>
         /// Temperatuur in °C in deze serre op dit moment.
@@ -106,15 +106,15 @@ namespace Plantenhotel
             }
         }
 
-        public double GebruikteRuimte
+        public double VrijeRuimte
         {
-            get { return gebruikteRuimte; }
+            get { return vrijeRuimte; }
             set
             {
-                if ( value != gebruikteRuimte )
+                if ( value != vrijeRuimte )
                 {
-                    gebruikteRuimte = value;
-                    OnPropertyChanged( "GebruikteRuimte" );
+                    vrijeRuimte = value;
+                    OnPropertyChanged( "VrijeRuimte" );
                 }
             }
         }
