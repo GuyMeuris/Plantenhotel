@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using System.Security.Cryptography;
-using Plantenhotel;
 
 
 namespace Plantenhotel
@@ -29,7 +27,7 @@ namespace Plantenhotel
             InitializeComponent();
         }
 
-        
+
         public void regbtn_Click(object sender, RoutedEventArgs e)
         {
 
@@ -37,12 +35,14 @@ namespace Plantenhotel
             // gegevens
             try
             {
-                System.IO.FileStream gegevensKlant;
-                byte[] gegevens = null;
-                gegevens = Encoding.ASCII.GetBytes(achnaam.Text + vrnaam.Text + straat.Text + nr.Text + postcode.Text + stad.Text + gsm.Text + geboorte.Text + mail.Text + Environment.NewLine);
-                gegevensKlant = new FileStream("Tekstbestanden/gegevensKlant.txt", FileMode.Append);
-                gegevensKlant.Write(gegevens, 0, gegevens.Length);
-                gegevensKlant.Close();
+                //System.IO.FileStream gegevensKlant;
+                //byte[] gegevens = null;
+                //gegevens = Encoding.ASCII.GetBytes(achnaam.Text + vrnaam.Text + straat.Text + nr.Text + postcode.Text + stad.Text + gsm.Text + geboorte.Text + mail.Text + Environment.NewLine);
+                //gegevensKlant = new FileStream("Tekstbestanden/gegevensKlant.txt", FileMode.Append);
+                //gegevensKlant.Write(gegevens, 0, gegevens.Length);
+                //gegevensKlant.Close();
+                Klant k = new Klant(achnaam.Text, vrnaam.Text, geboorte.Text, nr.Text, mail.Text, gebrnaam.Text, wwoord.Text);
+
             }
 
             catch (IOException ex)
@@ -50,35 +50,11 @@ namespace Plantenhotel
                 MessageBox.Show(ex.ToString());
             }
 
-            
-            //gebruikersnaam en wachtwoord
-            try
-            {
 
 
-                System.IO.FileStream gebrww;
-                byte[] gww = null;
-
-                string encGebr = AEScrypto.Encryptie(gebrnaam.Text);            //encryptie (?)
-                string encWW = AEScrypto.Encryptie(wwoord.Text);
-
-                gww = Encoding.ASCII.GetBytes(encGebr + encWW + Environment.NewLine);
-                gebrww = new FileStream("Tekstbestanden/GebruikersnaamWachtwoord.txt", FileMode.Append);
+            MessageBox.Show("U bent geregistreerd. Weet dat uw planten veilig zijn in onze handen.");
 
 
-                gebrww.Write(gww, 0, gww.Length);
-
-                gebrww.Close();
-
-
-            }
-
-            catch (IOException ex2)
-            {
-                MessageBox.Show(ex2.ToString());
-            }
-
-            Klant k = new Klant(achnaam.Text, vrnaam.Text, geboorte.Text, nr.Text, mail.Text, gebrnaam.Text, wwoord.Text);
 
             //naar login pagina
             Login nextPage = new Login();
@@ -86,5 +62,5 @@ namespace Plantenhotel
 
         }
     }
-    
+
 }

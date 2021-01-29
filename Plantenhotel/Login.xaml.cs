@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using System.Security.Cryptography;
-using Plantenhotel;
 
 namespace Plantenhotel
 {
@@ -49,13 +47,11 @@ namespace Plantenhotel
             }
             else
             {
-                
+
                 StreamReader sr = new StreamReader(@"Tekstbestanden\GebruikersnaamWachtwoord.txt");
                 string components = sr.ReadToEnd();
-                string decryptedLogin = AEScrypto.Encryptie(components); //decryptie (?)                
                 //components splitsen naar array
-                String[] regels = decryptedLogin.Split("\n");
-                
+                String[] regels = components.Split("\n");
                 sr.Close();
 
                 foreach (var item in regels)
@@ -66,13 +62,21 @@ namespace Plantenhotel
                     if (separatorIndex > 0)
                     {
                         string gebruikersnaam = item2.Substring(0, separatorIndex);
-                        gebruikers.Add(gebruikersnaam);
+                        string decrGebruiker = AEScrypto.Decryptie(gebruikersnaam);
+
+                        gebruikers.Add(decrGebruiker.Trim());
+
                         string wachtwoord = item2.Substring(separatorIndex + 1);
-                        wachtwoorden.Add(wachtwoord);
+                        string decrWachtwoord = AEScrypto.Decryptie(wachtwoord);
+
+                        wachtwoorden.Add(decrWachtwoord.Trim());
+
                     }
                 }
+              
                 string user = tbGebruikersnaam.Text.Trim();
                 string paswoord = tbWachtwoord.Password.Trim();
+
                 if (gebruikers.Contains(user) && wachtwoorden.Contains(paswoord)
                     && gebruikers.IndexOf(user) == wachtwoorden.IndexOf(paswoord))
                 {

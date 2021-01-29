@@ -139,15 +139,17 @@
             Wachtwoord:
                 </TextBlock>
                 <PasswordBox x:Name="tbWachtwoord" MinWidth="200" MaxHeight="30" />
+                
             </StackPanel>
             <!-- Login-knop-->
-            <Button Name="loginKnop" Padding="25 5"
+            <Button  Name="loginKnop" Padding="25 5"
                     HorizontalAlignment="Center" 
                     Click="loginKnop_Click_1" 
                     Style="{StaticResource button_style}" Margin="30"
                     MaxHeight="40">
                 Inloggen
             </Button>
+            
         </StackPanel>
     </Grid>
 </Page>
