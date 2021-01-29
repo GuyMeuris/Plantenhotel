@@ -24,5 +24,13 @@ namespace Plantenhotel
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Recensies r = new Recensies(naam.Text, recens.Text);
+            MessageBox.Show("Uw recensie is opgeslagen.");
+
+        }
     }
 }

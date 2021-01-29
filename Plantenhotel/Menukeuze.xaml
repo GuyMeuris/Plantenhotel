@@ -21,29 +21,78 @@
 
     </Page.Resources>
 
-    <Grid
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
-        <!--
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="6*" />
-            <RowDefinition Height="6*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        -->
-
-        <!--#region Menu-->
-
-        <TextBlock Text="Klantenmenu hier"
-                   Style="{StaticResource font_style}"
-                   FontSize="45">
-        </TextBlock>
 
 
-        <!--#endregion-->
-    </Grid>
+
+    <Border
+            Grid.Row="0"
+
+            Margin="240,-11,-201,-22"
+            Padding="5"
+            Background="#FF81D82E" Width="249">
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="1" Color="#FFDFFFC1" />
+                    <GradientStop Offset="0.673" Color="White" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <StackPanel
+                    Margin="10,10,10,10"
+                    Background="#4C81D82E" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        Margin="0,10,0,15"
+                        Foreground="#FF1E550B"
+                        Text="Recensie plaatsen" />
+                <TextBlock
+                        Margin="10,5,0,5"
+                        HorizontalAlignment="Left"
+                        FontSize="12"
+                        Foreground="#FF1E550B"
+                        Text="Je naam:" />
+
+                <TextBox Name="naam" Width="196" Height="16"/>
+
+                <TextBlock
+                        Margin="10,5,0,5"
+                        HorizontalAlignment="Left"
+                        FontSize="12"
+                        Foreground="#FF1E550B"
+                        Text="Je recensie:" />
+
+
+
+
+            </StackPanel>
+            <TextBox Name="recens" Margin="21,123,21,10" Grid.ColumnSpan="2"/>
+            <Button
+                        Background="#FF81D82E"
+                        BorderBrush="White"
+                        Content="Submit"
+                        FontWeight="Bold"
+                        Foreground="White" RenderTransformOrigin="0.505,0.61" Grid.ColumnSpan="2" Margin="40,18,39,242" Grid.Row="1" Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+    </Border>
+
 </Page>
