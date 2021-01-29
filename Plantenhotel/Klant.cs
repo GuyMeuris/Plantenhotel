@@ -1,11 +1,12 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+
 namespace Plantenhotel
 {
-    internal class Klant : Persoon
+    public class Klant : Persoon
     {
         #region Velden
         /// <summary>
@@ -20,8 +21,8 @@ namespace Plantenhotel
         /// </summary>
         private int aantalBestellingen = 0;
 
-       
-        
+        public static List<Klant> lijstKlanten = new List<Klant>();
+
 
         #endregion
 
@@ -50,6 +51,10 @@ namespace Plantenhotel
                                             string wachtwoord  ) :
             base( achternaam, voornaam, geboortedatum, gsmnr, email, gebruikersnaam, wachtwoord )
         {
+            string encrGebruiker = AEScrypto.Encryptie(gebruikersnaam);
+            string encrWachtwoord = AEScrypto.Encryptie(wachtwoord);
+            lijstKlanten.Add(this);
+
             System.IO.FileStream klantGegevens;
             byte[] gegevens = null;
             gegevens = Encoding.ASCII.GetBytes(achternaam + ";" + voornaam + ";" + gsmnr + ";" + geboortedatum + ";" + email + ";" + Environment.NewLine);
@@ -59,6 +64,7 @@ namespace Plantenhotel
 
             System.IO.FileStream gebrww;
             byte[] gww = null;
+            gww = Encoding.ASCII.GetBytes(encrGebruiker + " " + encrWachtwoord + Environment.NewLine);
             gebrww = new FileStream(@"..\..\..\Tekstbestanden\GebruikersnaamWachtwoord.txt", FileMode.Append);
             gebrww.Write(gww, 0, gww.Length);
             gebrww.Close();

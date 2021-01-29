@@ -21,13 +21,13 @@ namespace Plantenhotel
     /// </summary>
     public partial class Login : Page
     {
+        public Klant dude;
         public Login()
         {
             InitializeComponent();
         }
         List<string> gebruikers = new List<string>();
         List<string> wachtwoorden = new List<string>();
-
         private void DisplayWindow(Window windowToShow)
         {
             for (int i = 0; i < Application.Current.Windows.OfType<Window>().
@@ -47,37 +47,24 @@ namespace Plantenhotel
             }
             else
             {
-                //KanInloggen(_gebruiker, _wachtwoord);
-                StreamReader sr = new StreamReader(@"Tekstbestanden\GebruikersnaamWachtwoord.txt");
-                string components = sr.ReadToEnd();
-                //components splitsen naar array
-                String[] regels = components.Split("\n");
-                sr.Close();
-
-                foreach (var item in regels)
-                {
-                    string separator = " ";
-                    string item2 = item.Trim();
-                    int separatorIndex = item2.IndexOf(separator);
-                    if (separatorIndex > 0)
-                    {
-                        string gebruikersnaam = item2.Substring(0, separatorIndex);
-                        gebruikers.Add(gebruikersnaam);
-                        string wachtwoord = item2.Substring(separatorIndex + 1);
-                        wachtwoorden.Add(wachtwoord);
-                    }
-                }
                 string user = tbGebruikersnaam.Text.Trim();
                 string paswoord = tbWachtwoord.Password.Trim();
-                if (gebruikers.Contains(user) && wachtwoorden.Contains(paswoord)
-                    && gebruikers.IndexOf(user) == wachtwoorden.IndexOf(paswoord))
+                int a = Klant.lijstKlanten.FindIndex(e => e.Gebruikersnaam == user);
+                int b = Klant.lijstKlanten.FindIndex(e => e.Wachtwoord == paswoord);
+
+                if ((Klant.lijstKlanten.Exists(e => e.Gebruikersnaam == user)) && (Klant.lijstKlanten.Exists(e => e.Wachtwoord == paswoord))
+                    && (Klant.lijstKlanten.FindIndex(e => e.Gebruikersnaam == user)) == Klant.lijstKlanten.FindIndex(e => e.Wachtwoord == paswoord))
                 {
                     MessageBox.Show("U bent ingelogd, welkom!");
-                    DisplayWindow(new Klantenmenu());
+
+
+                    dude = Klant.lijstKlanten.Find(e => e.Gebruikersnaam == user);
+                    //App.Current.Properties[dude.KlantID] = 
+                    DisplayWindow(new Klantenmenu(dude));
+
 
                 }
                 else
-
                     MessageBox.Show("Gebruikersnaam of wachtwoord is niet juist, probeer opnieuw a.u.b.!");
 
             }

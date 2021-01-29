@@ -8,9 +8,10 @@ namespace Plantenhotel
     /// </summary>
     public partial class Klantenmenu : Window
     {
-        public Klantenmenu()
+        public Klantenmenu(Klant naam)
         {
             InitializeComponent();
+            naamKlant.DataContext = naam;
         }
 
         private void Klantenmenu_Loaded( object sender, RoutedEventArgs e )
