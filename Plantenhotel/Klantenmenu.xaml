@@ -272,10 +272,11 @@
                 </Ellipse.Fill>
             </Ellipse>
             <TextBlock
+                x:Name="naamKlant"
                 DockPanel.Dock="Right"
                 Margin="30,0,10,0"
                 Style="{StaticResource font_style}"
-                Text="Klant " />
+                Text="{Binding Gebruikersnaam}" />
         </DockPanel>
 
         <!--#endregion-->

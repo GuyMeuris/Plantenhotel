@@ -23,6 +23,9 @@ namespace Plantenhotel
         public Menukeuze()
         {
             InitializeComponent();
+
+            
+
         }
     }
 }

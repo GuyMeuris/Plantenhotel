@@ -59,7 +59,21 @@ namespace Plantenhotel
                                             string wachtwoord) :
             base(achternaam, voornaam, geboortedatum, gsmnr, email, gebruikersnaam, wachtwoord)
         {
-            
+            System.IO.FileStream klantGegevens;
+            byte[] gegevens = null;
+            gegevens = Encoding.ASCII.GetBytes(achternaam + ";" + voornaam + ";" + gsmnr + ";" + geboortedatum + ";" + email + ";" + Environment.NewLine);
+            klantGegevens = new FileStream(@"..\..\..\Tekstbestanden\gegevensKlant.txt", FileMode.Append);
+            klantGegevens.Write(gegevens, 0, gegevens.Length);
+            klantGegevens.Close();
+
+            System.IO.FileStream gebrww;
+            byte[] gww = null;
+            string encrGebruiker = AEScrypto.Encryptie(gebruikersnaam);
+            string encrWachtwoord = AEScrypto.Encryptie(wachtwoord);
+            gww = Encoding.ASCII.GetBytes(encrGebruiker + " " + encrWachtwoord + Environment.NewLine);
+            gebrww = new FileStream(@"..\..\..\Tekstbestanden\GebruikersnaamWachtwoord.txt", FileMode.Append);
+            gebrww.Write(gww, 0, gww.Length);
+            gebrww.Close();
         }
 
 

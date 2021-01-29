@@ -19,6 +19,10 @@ namespace Plantenhotel
         public MainWindow()
         {
             InitializeComponent();
+            Klant klant1 = new Klant("Aap", "Jos", "1/2/1999", "0496999999", "aaa@bbb.com", "gebruiker1", "ww1");
+            Klant klant2 = new Klant("Peeters", "Kos", "1/3/1999", "0496999998", "abb@bbb.com", "gebruiker2", "ww2");
+            Klant klant3 = new Klant("Cap", "Dos", "1/4/1999", "0496999997", "acc@bbb.com", "gebruiker3", "ww3");
+            Klant klant4 = new Klant("Dap", "Mos", "1/5/1999", "0496999996", "add@bbb.com", "gebruiker4", "ww4");
 
             Serre serre1 = new Serre( "Serre1", 200, 5, 22, 70 );
             serre1.HuidigeTemp = 21;
