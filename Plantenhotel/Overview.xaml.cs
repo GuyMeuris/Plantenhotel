@@ -43,6 +43,7 @@ namespace Plantenhotel
             hoogteSerre.DataContext = Serre.lijstSerres[keuzeIndex];
             tempSerre.DataContext = Serre.lijstSerres[keuzeIndex];
             vochtigheidSerre.DataContext = Serre.lijstSerres[keuzeIndex];
+            vrijeRuimteSerre.DataContext = Serre.lijstSerres[keuzeIndex];
         }
     }
 }

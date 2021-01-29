@@ -288,7 +288,8 @@
                         Grid.Column="0"
                         HorizontalAlignment="Right"
                         Style="{StaticResource font_style}"
-                        Text="157" />
+                        d:Text="157" 
+                        Text="{Binding VrijeRuimte}"/>
                     <TextBlock
                         Grid.Row="1"
                         Grid.Column="1"
