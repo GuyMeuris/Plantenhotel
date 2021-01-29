@@ -30,7 +30,8 @@ namespace Plantenhotel
 
             Recensies r = new Recensies(naam.Text, recens.Text);
             MessageBox.Show("Uw recensie is opgeslagen.");
-
+            naam.Text = string.Empty;
+            recens.Text = string.Empty;
         }
     }
 }

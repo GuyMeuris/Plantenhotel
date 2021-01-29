@@ -41,7 +41,7 @@ namespace Plantenhotel
                 //gegevensKlant = new FileStream("Tekstbestanden/gegevensKlant.txt", FileMode.Append);
                 //gegevensKlant.Write(gegevens, 0, gegevens.Length);
                 //gegevensKlant.Close();
-                Klant k = new Klant(achnaam.Text, vrnaam.Text, geboorte.Text, nr.Text, mail.Text, gebrnaam.Text, wwoord.Text);
+                Klant k = new Klant(achnaam.Text, vrnaam.Text, geboorte.Text, nr.Text, mail.Text, gebrnaam.Text, wwoord.Password.ToString());
 
             }
 

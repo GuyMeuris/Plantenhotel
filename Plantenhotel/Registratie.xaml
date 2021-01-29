@@ -103,6 +103,16 @@
                     Value="10"/>
 
         </Style>
+        
+        <Style x:Key="PasswordBox" TargetType="PasswordBox">
+
+            <Setter Property="MinWidth"
+                    Value="100"/>
+
+            <Setter Property="Margin"
+                    Value="10"/>
+
+        </Style>
 
     </Page.Resources>
     
@@ -161,9 +171,9 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource font_style}">Wachtwoord:</TextBlock>
-                    <TextBox Name ="wwoord" Style="{StaticResource textbox_style}"/>
+                    <PasswordBox x:Name="wwoord" Style="{StaticResource PasswordBox}"/>
                     <TextBlock Style="{StaticResource font_style}">Ww bevestigen:</TextBlock>
-                    <TextBox Name="txt12" Style="{StaticResource textbox_style}"/>
+                    <PasswordBox x:Name="txt12" Style="{StaticResource PasswordBox}"/>
                 </StackPanel>
         </StackPanel>
 
