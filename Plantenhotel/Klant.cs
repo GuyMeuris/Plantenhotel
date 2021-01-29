@@ -8,23 +8,23 @@ using System.Text;
 
 namespace Plantenhotel
 {
-    internal class Klant : Persoon
+    public class Klant : Persoon
     {
         #region Velden op klasse-niveau
         /// <summary>
-        /// Hier worden alle klanteninstqnties bewaard
+        /// Hier worden alle klanteninstanties bewaard
         /// </summary>
 
         public static List<Klant> lijstKlanten = new List<Klant>();
 
+
         #endregion
 
-        #region Velden op instantie niveu
+        #region Velden op instantie niveau
         /// <summary>
-        /// Datum wanneer klant heeft geregistreerd op registratiepagina
-        /// klantSinds = DateTime.Now() bij registratie
+        /// uniek klantennummer
         /// </summary>
-        public DateTime klantSinds;
+        private int klantID;
 
         /// <summary>
         /// Aantal bestelling dat klant sinds begin al heeft geplaatst
@@ -49,6 +49,8 @@ namespace Plantenhotel
             }
         }
 
+        public int KlantID { get; set; } = 0;
+
         #endregion
 
         #region Constructors
@@ -59,6 +61,8 @@ namespace Plantenhotel
                                             string wachtwoord) :
             base(achternaam, voornaam, geboortedatum, gsmnr, email, gebruikersnaam, wachtwoord)
         {
+            ++KlantID;
+            lijstKlanten.Add(this);
             System.IO.FileStream klantGegevens;
             byte[] gegevens = null;
             gegevens = Encoding.ASCII.GetBytes(achternaam + ";" + voornaam + ";" + gsmnr + ";" + geboortedatum + ";" + email + ";" + Environment.NewLine);

@@ -276,7 +276,8 @@
                 DockPanel.Dock="Right"
                 Margin="30,0,10,0"
                 Style="{StaticResource font_style}"
-                Text="{Binding Gebruikersnaam}" />
+                d:Text="Joskeqqqq"
+                Text="{Binding Voornaam}" />
         </DockPanel>
 
         <!--#endregion-->

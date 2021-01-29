@@ -8,17 +8,12 @@ namespace Plantenhotel
     /// </summary>
     public partial class Klantenmenu : Window
     {
-        private int index;
-
-        public Klantenmenu()
+        public Klantenmenu(Klant naam)
         {
-            InitializeComponent();
+          InitializeComponent();
 
-           // index = ;
-           // naamKlant.DataContext = Klant.lijstKlanten[index];
-
+          naamKlant.DataContext = naam;
         }
-
         private void Klantenmenu_Loaded( object sender, RoutedEventArgs e )
         {
             MenuFrame.NavigationService.Navigate( new Menukeuze() );

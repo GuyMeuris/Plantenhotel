@@ -147,9 +147,10 @@
                     Click="loginKnop_Click_1" 
                     Style="{StaticResource button_style}" Margin="30"
                     MaxHeight="40">
+             
                 Inloggen
-            </Button>
-            
+                </Button>
+
         </StackPanel>
     </Grid>
 </Page>

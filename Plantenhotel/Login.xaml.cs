@@ -21,7 +21,8 @@ namespace Plantenhotel
     /// </summary>
     public partial class Login : Page
     {
-        public Login()
+        public Klant dude;
+          public Login()
         {
             InitializeComponent();
         }
@@ -47,48 +48,58 @@ namespace Plantenhotel
             }
             else
             {
-
-                StreamReader sr = new StreamReader(@"Tekstbestanden\GebruikersnaamWachtwoord.txt");
-                string components = sr.ReadToEnd();
-                //components splitsen naar array
-                String[] regels = components.Split("\n");
-                sr.Close();
-
-                foreach (var item in regels)
-                {
-                    string separator = " ";
-                    string item2 = item.Trim();
-                    int separatorIndex = item2.IndexOf(separator);
-                    if (separatorIndex > 0)
-                    {
-                        string gebruikersnaam = item2.Substring(0, separatorIndex);
-                        string decrGebruiker = AEScrypto.Decryptie(gebruikersnaam);
-
-                        gebruikers.Add(decrGebruiker.Trim());
-
-                        string wachtwoord = item2.Substring(separatorIndex + 1);
-                        string decrWachtwoord = AEScrypto.Decryptie(wachtwoord);
-
-                        wachtwoorden.Add(decrWachtwoord.Trim());
-
-                    }
-                }
-              
                 string user = tbGebruikersnaam.Text.Trim();
                 string paswoord = tbWachtwoord.Password.Trim();
+                int a = Klant.lijstKlanten.FindIndex(e => e.Gebruikersnaam == user);
+                int b = Klant.lijstKlanten.FindIndex(e => e.Wachtwoord == paswoord);
 
-                if (gebruikers.Contains(user) && wachtwoorden.Contains(paswoord)
-                    && gebruikers.IndexOf(user) == wachtwoorden.IndexOf(paswoord))
+                if ((Klant.lijstKlanten.Exists(e => e.Gebruikersnaam == user)) && (Klant.lijstKlanten.Exists(e => e.Wachtwoord == paswoord))
+                    && (Klant.lijstKlanten.FindIndex(e => e.Gebruikersnaam == user)) == Klant.lijstKlanten.FindIndex(e => e.Wachtwoord == paswoord))
                 {
                     MessageBox.Show("U bent ingelogd, welkom!");
-                    DisplayWindow(new Klantenmenu());
+                    
+
+                    dude = Klant.lijstKlanten.Find(e => e.Gebruikersnaam == user);
+                    //App.Current.Properties[dude.KlantID] = 
+                    DisplayWindow(new Klantenmenu(dude));
+
 
                 }
                 else
-
                     MessageBox.Show("Gebruikersnaam of wachtwoord is niet juist, probeer opnieuw a.u.b.!");
-
+                
             }
         }
+        //public int toonIndex(int keuze) 
+        //{
+        //    return keuze;
+        //}
     }
 }
+
+///oude versie (werkt)
+//StreamReader sr = new StreamReader(@"Tekstbestanden\GebruikersnaamWachtwoord.txt");
+//string components = sr.ReadToEnd();
+////components splitsen naar array
+//String[] regels = components.Split("\n");
+//sr.Close();
+
+//foreach (var item in regels)
+//{
+//    string separator = " ";
+//    string item2 = item.Trim();
+//    int separatorIndex = item2.IndexOf(separator);
+//    if (separatorIndex > 0)
+//    {
+//        string gebruikersnaam = item2.Substring(0, separatorIndex);
+//        string decrGebruiker = AEScrypto.Decryptie(gebruikersnaam);
+
+//        gebruikers.Add(decrGebruiker.Trim());
+
+//        string wachtwoord = item2.Substring(separatorIndex + 1);
+//        string decrWachtwoord = AEScrypto.Decryptie(wachtwoord);
+
+//        wachtwoorden.Add(decrWachtwoord.Trim());
+
+//    }
+//}

@@ -13,5 +13,6 @@ namespace Plantenhotel
     /// </summary>
     public partial class App : Application
     {
+        public int Plaats { get; set; }
     }
 }
