@@ -34,7 +34,7 @@
             Grid.Column="0"
             Padding="5"
             Margin="0,20"
-            Background="#FF81D82E" Width="249">
+            Background="#1E550B" Width="249">
             <Grid>
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -100,7 +100,7 @@
         <Border
             Grid.Column="1"
             Padding="5"
-            Background="#FF81D82E" Width="249"
+            Background="#1E550B" Width="249"
             Margin="0,20">
             <Grid>
                 <Grid.Background>

@@ -13,6 +13,7 @@
     <None Remove="Images\arrow_right.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\Blaadjes.PNG" />
+    <None Remove="Images\bloempje.png" />
     <None Remove="Images\check.png" />
     <None Remove="Images\enveloppe.png" />
     <None Remove="Images\fout.png" />
@@ -28,6 +29,7 @@
     <None Remove="Images\GreenRegBtn.png" />
     <None Remove="Images\GreenSettingsBtn.png" />
     <None Remove="Images\GreenTreePic.png" />
+    <None Remove="Images\GroeneBlaadjes.png" />
     <None Remove="Images\hoogte.png" />
     <None Remove="Images\MapMarker.png" />
     <None Remove="Images\plantenhotel.jpg" />
@@ -54,6 +56,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\bell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bloempje.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\check.png">
@@ -93,6 +98,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GreenTreePic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GroeneBlaadjes.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\hoogte.png">
