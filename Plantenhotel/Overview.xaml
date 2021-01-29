@@ -67,22 +67,43 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
                     Orientation="Horizontal">
-                    <Ellipse Width="20" Height="20">
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="/Images/arrow_left.png" />
-                        </Ellipse.Fill>
-                    </Ellipse>
+                    <Button x:Name="serreKiezen_Min" 
+                            Click="SerreKiezenMin_Click" 
+                            BorderBrush="{x:Null}" 
+                            Background="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="40" />
+                            </Style>
+                        </Button.Resources>
+                        <Ellipse Width="20" Height="20">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/Images/arrow_left.png" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Button>
                     <TextBlock
                         x:Name="naamSerre"
                         Margin="10,0"
+                        d:Text="Serre1"
                         Background="#4C81D82E"
                         Style="{StaticResource font_style}"
-                        Text="Serre 1" />
-                    <Ellipse Width="20" Height="20">
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="/Images/arrow_right.png" />
-                        </Ellipse.Fill>
-                    </Ellipse>
+                        Text="{Binding Serre_ID}" />
+                    <Button x:Name="serreKiezen_Plus" 
+                            Click="SerreKiezen_Plus"
+                            BorderBrush="{x:Null}" 
+                            Background="White">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="40" />
+                            </Style>
+                        </Button.Resources>
+                        <Ellipse Width="20" Height="20">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/Images/arrow_right.png" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Button>
                 </StackPanel>
 
                 <Grid
@@ -139,15 +160,17 @@
                         Grid.Row="0"
                         Grid.Column="2"
                         HorizontalAlignment="Right"
+                        d:Text="200"
                         Style="{StaticResource font_style}"
-                        Text="200" />
+                        Text="{Binding Grootte}" />
                     <TextBlock
                         x:Name="hoogteSerre"
                         Grid.Row="1"
                         Grid.Column="2"
                         HorizontalAlignment="Right"
+                        d:Text="5"
                         Style="{StaticResource font_style}"
-                        Text="5" />
+                        Text="{Binding Hoogte}" />
                     <TextBlock
                         Grid.Row="0"
                         Grid.Column="3"
@@ -205,15 +228,17 @@
                         Grid.Row="0"
                         Grid.Column="2"
                         HorizontalAlignment="Right"
+                        d:Text="21,5"
                         Style="{StaticResource font_style}"
-                        Text="21,5" />
+                        Text="{Binding HuidigeTemp}" />
                     <TextBlock
                         x:Name="vochtigheidSerre"
                         Grid.Row="1"
                         Grid.Column="2"
                         HorizontalAlignment="Right"
+                        d:Text="70"
                         Style="{StaticResource font_style}"
-                        Text="70" />
+                        Text="{Binding HuidigeVochtigheid}" />
                     <TextBlock
                         Grid.Row="0"
                         Grid.Column="3"
