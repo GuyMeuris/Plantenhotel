@@ -85,31 +85,6 @@
                             <ComboBoxItem>4</ComboBoxItem>
                             <ComboBoxItem>5</ComboBoxItem>
                             <ComboBoxItem>6</ComboBoxItem>
-                            <ComboBoxItem>7</ComboBoxItem>
-                            <ComboBoxItem>8</ComboBoxItem>
-                            <ComboBoxItem>9</ComboBoxItem>
-                            <ComboBoxItem>10</ComboBoxItem>
-                            <ComboBoxItem>11</ComboBoxItem>
-                            <ComboBoxItem>12</ComboBoxItem>
-                            <ComboBoxItem>13</ComboBoxItem>
-                            <ComboBoxItem>14</ComboBoxItem>
-                            <ComboBoxItem>15</ComboBoxItem>
-                            <ComboBoxItem>16</ComboBoxItem>
-                            <ComboBoxItem>17</ComboBoxItem>
-                            <ComboBoxItem>18</ComboBoxItem>
-                            <ComboBoxItem>19</ComboBoxItem>
-                            <ComboBoxItem>20</ComboBoxItem>
-                            <ComboBoxItem>20</ComboBoxItem>
-                            <ComboBoxItem>21</ComboBoxItem>
-                            <ComboBoxItem>22</ComboBoxItem>
-                            <ComboBoxItem>23</ComboBoxItem>
-                            <ComboBoxItem>24</ComboBoxItem>
-                            <ComboBoxItem>25</ComboBoxItem>
-                            <ComboBoxItem>26</ComboBoxItem>
-                            <ComboBoxItem>27</ComboBoxItem>
-                            <ComboBoxItem>28</ComboBoxItem>
-                            <ComboBoxItem>29</ComboBoxItem>
-                            <ComboBoxItem>30</ComboBoxItem>
                         </ComboBox>
                     </StackPanel>
                     <TextBlock
@@ -118,7 +93,7 @@
                         FontSize="12"
                         Foreground="#FF1E550B"
                         Text="Gewenste datum check-in:" />
-                    <Calendar Margin="0 0 20 0"/>
+                    <Calendar Margin="0 0 0 0"/>
                     <Button
                         Margin="20,10,20,0"
                         Background="#FF81D82E"
