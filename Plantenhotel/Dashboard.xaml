@@ -46,10 +46,7 @@
 
         <StackPanel Grid.Row="0" Grid.RowSpan="4">
             <StackPanel.Background>
-                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Offset="0.2" Color="#FF81D82E" />
-                    <GradientStop Offset="0.41" Color="White" />
-                </LinearGradientBrush>
+                <ImageBrush ImageSource="Images/bloempje.png"/>
             </StackPanel.Background>
             <Button
                 Width="70"
@@ -242,8 +239,10 @@
         <DockPanel
             Grid.Row="0"
             Grid.Column="2"
-            Margin="20,0,0,0"
-            Background="#FF81D82E">
+            Margin="20,0,0,0">
+            <DockPanel.Background>
+                <SolidColorBrush Color="#FF1E550B" Opacity="0.7"/>
+            </DockPanel.Background>
             <Border Padding="20,20" DockPanel.Dock="Left">
                 <Image Source="/Images/printer.png" />
             </Border>
@@ -289,10 +288,7 @@
             Grid.ColumnSpan="2"
             NavigationUIVisibility="Hidden">
             <Frame.Background>
-                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Offset="1" Color="#a2f453" />
-                    <GradientStop Offset="0.553" Color="White" />
-                </LinearGradientBrush>
+                <ImageBrush ImageSource="Images/GroeneBlaadjes.png"/>
             </Frame.Background>
         </Frame>
 

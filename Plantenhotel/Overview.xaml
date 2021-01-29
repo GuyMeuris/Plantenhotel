@@ -42,7 +42,7 @@
             Grid.Column="0"
             Margin="20"
             Padding="5"
-            Background="#FF81D82E">
+            Background="#1E550B">
             <Grid>
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -343,7 +343,7 @@
             Grid.Column="1"
             Margin="20"
             Padding="5"
-            Background="#FF81D82E">
+            Background="#1E550B">
             <Grid>
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -514,7 +514,7 @@
             Grid.Column="0"
             Margin="20"
             Padding="5"
-            Background="#FF81D82E">
+            Background="#1E550B">
             <Grid>
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -588,7 +588,7 @@
             Grid.Column="1"
             Margin="20"
             Padding="5"
-            Background="#FF81D82E">
+            Background="#1E550B">
             <Grid>
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
